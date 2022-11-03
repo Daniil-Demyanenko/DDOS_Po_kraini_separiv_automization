@@ -15,7 +15,7 @@ namespace DosStart
         static Process AttackProcess = null;
         static async Task Main(string[] args)
         {
-            var speed = Prompt.Select("Выберите скорость DOS режима", new[] { "Медленно", dit"Быстро" });
+            var speed = Prompt.Select("Выберите скорость DOS режима", new[] { "Медленно", "Быстро" });
             var staistic = Prompt.Confirm("Отправлять статистику?", defaultValue: true);
 
             var AC = GetAttackCommands();
@@ -77,8 +77,6 @@ namespace DosStart
             AttackProcess = Process.Start(psi);
             //Console.WriteLine(p.StandardOutput.ReadToEnd());
         }
-
-
 
         ~Program()
         {
